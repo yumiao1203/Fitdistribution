@@ -3,9 +3,9 @@ package com.chinapex
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.{Column, SparkSession}
 import breeze.linalg.{min, DenseVector => BDV}
-import breeze.stats.distributions.{Exponential, Gamma, Gaussian}
+import breeze.stats.distributions._
 import com.chinapex.KNNKL._
-import org.apache.spark.mllib.stat.{KernelDensity}
+import org.apache.spark.mllib.stat.KernelDensity
 import org.apache.spark.rdd.RDD
 
 
@@ -26,6 +26,9 @@ object Launcher extends App {
 
   val realBDV = BDV(realData.toArray:_*)
 
+  val param0 = FitUniform.fitUniform(realBDV)
+  println(param0)
+  val UniformData = Uniform(param0._1, param0._2).sample(100)
 
   val param1 = FitGaussian.fitGauss(realBDV)
   println(param1)
@@ -38,6 +41,12 @@ object Launcher extends App {
   val param3 = FitExponential.fitExponential(realBDV)
   println(param3)
   val ExponData = Exponential(param3).sample(100)
+
+  val param4 = FitBeta.fitBeta(realBDV)
+  print(param4)
+//  val BetaData = Beta(param4._1,param4._2).sample(100)
+
+
 //
 //  val pi = math.Pi
 //
@@ -142,19 +151,8 @@ object Launcher extends App {
   println(execute1(realData.toArray,GaussData.toArray,10))
   println(execute1(realData.toArray,GammaData.toArray,10))
   println(execute1(realData.toArray,ExponData.toArray,10))
+  println(execute1(realData.toArray,UniformData.toArray,10))
 
-
-  val data: RDD[Double] = sc.parallelize(Seq(1, 1, 1, 2, 3, 4, 5, 5, 6, 7, 8, 9, 9))
-
-  // Construct the density estimator with the sample data and a standard deviation
-  // for the Gaussian kernels
-  val kd = new KernelDensity()
-    .setSample(data)
-    .setBandwidth(3.0)
-
-  // Find density estimates for the given values
-  val densities = kd.estimate(Array(-1.0, 2.0, 5.0))
-  densities.foreach(println)
 
 
 }
