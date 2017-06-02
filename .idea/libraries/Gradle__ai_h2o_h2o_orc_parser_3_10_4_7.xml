@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ai.h2o:h2o-orc-parser:3.10.4.7">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/gradle/caches/modules-2/files-2.1/ai.h2o/h2o-orc-parser/3.10.4.7/2be906adbc451eacf56193f8e2df317a1c42dc54/h2o-orc-parser-3.10.4.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/gradle/caches/modules-2/files-2.1/ai.h2o/h2o-orc-parser/3.10.4.7/67a9a848b74e912f896e3b205770727b11a01023/h2o-orc-parser-3.10.4.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

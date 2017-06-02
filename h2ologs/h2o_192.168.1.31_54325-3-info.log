@@ -1,0 +1,54 @@
+05-25 10:09:05.448 192.168.1.31:54325    14329  #r thread INFO: ----- H2O started  -----
+05-25 10:09:05.461 192.168.1.31:54325    14329  #r thread INFO: Build git branch: rel-ueno
+05-25 10:09:05.462 192.168.1.31:54325    14329  #r thread INFO: Build git hash: 4ee79d6cb840d66d9835f499e40af4867a3c8eb1
+05-25 10:09:05.462 192.168.1.31:54325    14329  #r thread INFO: Build git describe: jenkins-3.10.4.6-2-g4ee79d6
+05-25 10:09:05.462 192.168.1.31:54325    14329  #r thread INFO: Build project version: 3.10.4.7 (latest version: unknown)
+05-25 10:09:05.462 192.168.1.31:54325    14329  #r thread INFO: Build age: 16 days
+05-25 10:09:05.462 192.168.1.31:54325    14329  #r thread INFO: Built by: 'jenkins'
+05-25 10:09:05.462 192.168.1.31:54325    14329  #r thread INFO: Built on: '2017-05-08 14:22:29'
+05-25 10:09:05.463 192.168.1.31:54325    14329  #r thread INFO: Watchdog Build git branch: (unknown)
+05-25 10:09:05.463 192.168.1.31:54325    14329  #r thread INFO: Watchdog Build git hash: (unknown)
+05-25 10:09:05.463 192.168.1.31:54325    14329  #r thread INFO: Watchdog Build git describe: (unknown)
+05-25 10:09:05.463 192.168.1.31:54325    14329  #r thread INFO: Watchdog Build project version: (unknown)
+05-25 10:09:05.463 192.168.1.31:54325    14329  #r thread INFO: Watchdog Built by: (unknown)
+05-25 10:09:05.463 192.168.1.31:54325    14329  #r thread INFO: Watchdog Built on: (unknown)
+05-25 10:09:05.463 192.168.1.31:54325    14329  #r thread INFO: Processed H2O arguments: [-name, sparkling-water-josh_273840085, -ga_opt_out, -log_level, INFO, -baseport, 54321, -ip, 192.168.1.31, -log_dir, /home/josh/IdeaProjects/GLRMTest1/h2ologs]
+05-25 10:09:05.464 192.168.1.31:54325    14329  #r thread INFO: Java availableProcessors: 4
+05-25 10:09:05.464 192.168.1.31:54325    14329  #r thread INFO: Java heap totalMemory: 229.5 MB
+05-25 10:09:05.464 192.168.1.31:54325    14329  #r thread INFO: Java heap maxMemory: 1.71 GB
+05-25 10:09:05.464 192.168.1.31:54325    14329  #r thread INFO: Java version: Java 1.8.0_131 (from Oracle Corporation)
+05-25 10:09:05.464 192.168.1.31:54325    14329  #r thread INFO: JVM launch parameters: [-javaagent:/home/josh/Downloads/idea-IC-171.4249.39/lib/idea_rt.jar=44471:/home/josh/Downloads/idea-IC-171.4249.39/bin, -Dfile.encoding=UTF-8]
+05-25 10:09:05.464 192.168.1.31:54325    14329  #r thread INFO: OS version: Linux 4.4.0-78-generic (amd64)
+05-25 10:09:05.464 192.168.1.31:54325    14329  #r thread INFO: Machine physical memory: 7.70 GB
+05-25 10:09:05.464 192.168.1.31:54325    14329  #r thread INFO: X-h2o-cluster-id: 1495678142397
+05-25 10:09:05.465 192.168.1.31:54325    14329  #r thread INFO: User name: 'josh'
+05-25 10:09:05.465 192.168.1.31:54325    14329  #r thread INFO: Opted out of sending usage metrics.
+05-25 10:09:05.465 192.168.1.31:54325    14329  #r thread INFO: IPv6 stack selected: false
+05-25 10:09:05.465 192.168.1.31:54325    14329  #r thread INFO: Possible IP Address: ppp0 (ppp0), 10.10.0.2
+05-25 10:09:05.465 192.168.1.31:54325    14329  #r thread INFO: Network interface is down: name:docker0 (docker0)
+05-25 10:09:05.465 192.168.1.31:54325    14329  #r thread INFO: Possible IP Address: enp2s0 (enp2s0), fe80:0:0:0:8c66:f892:b95:3fba%enp2s0
+05-25 10:09:05.465 192.168.1.31:54325    14329  #r thread INFO: Possible IP Address: enp2s0 (enp2s0), 192.168.1.31
+05-25 10:09:05.466 192.168.1.31:54325    14329  #r thread INFO: Possible IP Address: lo (lo), 0:0:0:0:0:0:0:1%lo
+05-25 10:09:05.466 192.168.1.31:54325    14329  #r thread INFO: Possible IP Address: lo (lo), 127.0.0.1
+05-25 10:09:05.466 192.168.1.31:54325    14329  #r thread INFO: H2O node running in unencrypted mode.
+05-25 10:09:05.471 192.168.1.31:54325    14329  #r thread INFO: Internal communication uses port: 54326
+05-25 10:09:05.471 192.168.1.31:54325    14329  #r thread INFO: Listening for HTTP and REST traffic on http://192.168.1.31:54325/
+05-25 10:09:05.535 192.168.1.31:54325    14329  #r thread INFO: H2O cloud name: 'sparkling-water-josh_273840085' on /192.168.1.31:54325, discovery address /227.215.123.18:58327
+05-25 10:09:05.535 192.168.1.31:54325    14329  #r thread INFO: If you have trouble connecting, try SSH tunneling from your local machine (e.g., via port 55555):
+05-25 10:09:05.535 192.168.1.31:54325    14329  #r thread INFO:   1. Open a terminal and run 'ssh -L 55555:localhost:54325 josh@192.168.1.31'
+05-25 10:09:05.535 192.168.1.31:54325    14329  #r thread INFO:   2. Point your browser to http://localhost:55555
+05-25 10:09:05.586 192.168.1.31:54325    14329  #r thread INFO: Log dir: '/home/josh/IdeaProjects/GLRMTest1/h2ologs'
+05-25 10:09:05.586 192.168.1.31:54325    14329  #r thread INFO: Cur dir: '/home/josh/IdeaProjects/GLRMTest1'
+05-25 10:09:05.599 192.168.1.31:54325    14329  #r thread INFO: HDFS subsystem successfully initialized
+05-25 10:09:05.605 192.168.1.31:54325    14329  #r thread INFO: S3 subsystem successfully initialized
+05-25 10:09:05.605 192.168.1.31:54325    14329  #r thread INFO: Flow dir: '/home/josh/h2oflows'
+05-25 10:09:05.623 192.168.1.31:54325    14329  #r thread INFO: Cloud of size 1 formed [/192.168.1.31:54325]
+05-25 10:09:05.658 192.168.1.31:54325    14329  #r thread INFO: Registered parsers: [GUESS, ARFF, XLS, SVMLight, AVRO, ORC, PARQUET, CSV]
+05-25 10:09:05.658 192.168.1.31:54325    14329  #r thread INFO: Watchdog extension initialized
+05-25 10:09:05.659 192.168.1.31:54325    14329  #r thread INFO: Registered 1 extensions in: 3mS
+05-25 10:09:06.246 192.168.1.31:54325    14329  #r thread INFO: Registered: 148 REST APIs in: 586mS
+05-25 10:09:06.247 192.168.1.31:54325    14329  #r thread INFO: H2O started in 2560ms
+05-25 10:09:06.247 192.168.1.31:54325    14329  #r thread INFO: 
+05-25 10:09:06.247 192.168.1.31:54325    14329  #r thread INFO: Open H2O Flow in your web browser: http://192.168.1.31:54325
+05-25 10:09:06.247 192.168.1.31:54325    14329  #r thread INFO: 
+05-25 10:09:18.775 192.168.1.31:54325    14329  main      INFO: Registered: 223 schemas in 801ms

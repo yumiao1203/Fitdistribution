@@ -1,0 +1,92 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '1.2.4'
+}
+
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'scala'
+
+sourceCompatibility = 1.5
+
+repositories {
+    repositories {
+        maven{
+            url "http://maven.aliyun.com/nexus/content/groups/public"
+        }
+    }
+}
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2.11.8'
+    compile 'org.scala-lang:scala-compiler:2.11.8'
+    compile 'com.typesafe.akka:akka-remote_2.11:2.4.10'
+    compile 'com.typesafe.akka:akka-actor_2.11:2.4.10'
+    compile 'org.apache.hbase:hbase-client:1.2.3'
+    compile 'org.apache.hbase:hbase-common:1.2.3'
+    compile 'org.apache.hbase:hbase-server:1.2.3'
+    compile 'org.apache.spark:spark-core_2.11:2.1.0'
+    compile 'org.apache.spark:spark-sql_2.11:2.1.0'
+    compile 'org.apache.spark:spark-streaming_2.11:2.1.0'
+    compile 'org.apache.spark:spark-mllib_2.11:2.1.0'
+    // scala csv
+    compile 'com.github.tototoshi:scala-csv_2.11:1.3.4'
+    //compile group: 'com.databricks', name: 'spark-csv_2.11', version: '1.5.0' //文件输出的时候有这个包会出错
+    compile 'joda-time:joda-time:2.5'
+    compile 'org.joda:joda-convert:1.2'
+    compile group: 'org.scalaforge', name: 'scalax', version: '0.1'
+    compile "net.liftweb:lift-json_2.11:3.0-RC4"
+    compile "ch.megard:akka-http-cors_2.11:0.1.7"
+    compile group: 'com.github.scopt', name: 'scopt_2.10', version: '3.2.0'
+
+    //本地jar包
+    //compile fileTree(dir: 'libs', include: '*.jar')
+
+    // sparking water
+    compile group: 'ai.h2o', name: 'sparkling-water-repl_2.11', version: "2.1.7"
+    compile group: 'ai.h2o', name: 'sparkling-water-ml_2.11', version: "2.1.7"
+    compile group: 'ai.h2o', name: 'sparkling-water-core_2.11', version: "2.1.7"
+
+    //http request lib
+    compile group: 'org.scalaj', name: 'scalaj-http_2.11', version: '2.3.0'
+
+    compile('org.apache.hadoop:hadoop-mapreduce-client-core:2.7.2') {force = true}
+
+    compile('org.apache.hadoop:hadoop-common:2.7.2') {force = true} // required for org.apache.hadoop.util.StopWatch
+    compile('commons-io:commons-io:2.4') {force = true} // required for org.apache.commons.io.Charsets that is used internally
+    // plot
+    compile('org.sameersingh.scalaplot:scalaplot:0.0.4')
+
+    compile('org.scalanlp:breeze_2.11:0.13.1')
+
+
+
+}
+
+apply plugin: 'com.github.johnrengelman.shadow'
+
+jar {
+    zip64 = true
+    manifest {
+        attributes "Main-Class":"com.chinapex.Launcher"
+    }
+    from {
+        configurations.compile.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+        configurations.runtime.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }{
+        exclude "META-INF/*.SF"
+        exclude "META-INF/*.DSA"
+        exclude "META-INF/*.RSA"
+    }
+}
+
+shadowJar {
+    transform(com.github.jengelman.gradle.plugins.shadow.transformers.AppendingTransformer) {
+        resource = 'reference.conf'
+    }
+    zip64 true
+}

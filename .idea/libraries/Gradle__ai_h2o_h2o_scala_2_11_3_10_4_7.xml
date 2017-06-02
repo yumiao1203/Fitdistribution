@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ai.h2o:h2o-scala_2.11:3.10.4.7">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/gradle/caches/modules-2/files-2.1/ai.h2o/h2o-scala_2.11/3.10.4.7/53794d7a9a4b28725826015c0fd44cf419cda3f1/h2o-scala_2.11-3.10.4.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/gradle/caches/modules-2/files-2.1/ai.h2o/h2o-scala_2.11/3.10.4.7/977a7edc8b1ff0d204ac10cba8325a16d2aa3c0b/h2o-scala_2.11-3.10.4.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ai.h2o:h2o-web:3.10.4.7">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/gradle/caches/modules-2/files-2.1/ai.h2o/h2o-web/3.10.4.7/b237407563d52be6065937972ea60c571a609183/h2o-web-3.10.4.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/gradle/caches/modules-2/files-2.1/ai.h2o/h2o-web/3.10.4.7/82ee7dd7f55486dd1bfae61e4a353c6f64e345e8/h2o-web-3.10.4.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -28,7 +28,7 @@ object Col2BDV extends App {
 
 
   val cleandf = df.filter("Age is not null")
-  　//column2BDV
+
   val AgeArray = cleandf.select("Age").rdd.map { r => r.getDouble(0) }.collect()
   val AgeBDV = BDV(AgeArray: _*)
 

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ai.h2o:h2o-parquet-parser:3.10.4.7">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/gradle/caches/modules-2/files-2.1/ai.h2o/h2o-parquet-parser/3.10.4.7/89f4c1e50320c900449eabdfb5f36b00e67046d/h2o-parquet-parser-3.10.4.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/gradle/caches/modules-2/files-2.1/ai.h2o/h2o-parquet-parser/3.10.4.7/de2c734fcd652d88fbf0adb83230bf6850664ca4/h2o-parquet-parser-3.10.4.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

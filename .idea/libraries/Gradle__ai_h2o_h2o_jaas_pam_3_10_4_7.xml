@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ai.h2o:h2o-jaas-pam:3.10.4.7">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/gradle/caches/modules-2/files-2.1/ai.h2o/h2o-jaas-pam/3.10.4.7/8fbf306e467249f5cefe28334dee3973ae36f2a8/h2o-jaas-pam-3.10.4.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/gradle/caches/modules-2/files-2.1/ai.h2o/h2o-jaas-pam/3.10.4.7/95b8c4a9bb2c523f0726a5cbd6865c00d8560c3b/h2o-jaas-pam-3.10.4.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

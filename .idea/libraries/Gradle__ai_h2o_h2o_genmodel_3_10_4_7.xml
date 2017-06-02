@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ai.h2o:h2o-genmodel:3.10.4.7">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/gradle/caches/modules-2/files-2.1/ai.h2o/h2o-genmodel/3.10.4.7/9ce6df3d473b9ad6d99cdba2f65dc29265da67ee/h2o-genmodel-3.10.4.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/gradle/caches/modules-2/files-2.1/ai.h2o/h2o-genmodel/3.10.4.7/bc393bdd1fcb8493a7877bf1ee84461692a105c9/h2o-genmodel-3.10.4.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

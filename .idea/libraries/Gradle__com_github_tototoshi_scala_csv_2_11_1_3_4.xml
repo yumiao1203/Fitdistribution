@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.tototoshi:scala-csv_2.11:1.3.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/gradle/caches/modules-2/files-2.1/com.github.tototoshi/scala-csv_2.11/1.3.4/8fe9eb56ce253b06fcbeccc13479bf27aab9117e/scala-csv_2.11-1.3.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/gradle/caches/modules-2/files-2.1/com.github.tototoshi/scala-csv_2.11/1.3.4/8d64a421f7bcac182dac26f1ce2816893027b6f7/scala-csv_2.11-1.3.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

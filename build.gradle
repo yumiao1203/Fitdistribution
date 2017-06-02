@@ -1,0 +1,20 @@
+group 'ScalaLearning'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'scala'
+
+sourceCompatibility = 1.5
+
+repositories {
+    repositories {
+        maven{
+            url "http://maven.aliyun.com/nexus/content/groups/public"
+        }
+    }
+}
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2.11.8'
+    compile 'org.scala-lang:scala-compiler:2.11.8'
+}

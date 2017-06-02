@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ai.h2o:h2o-avro-parser:3.10.4.7">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/gradle/caches/modules-2/files-2.1/ai.h2o/h2o-avro-parser/3.10.4.7/2fb6456ecc79857873875fb1add46cd38a2912c6/h2o-avro-parser-3.10.4.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/gradle/caches/modules-2/files-2.1/ai.h2o/h2o-avro-parser/3.10.4.7/d041d2434870f17bd50c021c6c7cc0662c75052c/h2o-avro-parser-3.10.4.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

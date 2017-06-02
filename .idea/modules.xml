@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Fitdistribution.iml" filepath="$PROJECT_DIR$/.idea/modules/Fitdistribution.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GLRMTest1.iml" filepath="$PROJECT_DIR$/.idea/modules/GLRMTest1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GLRMTest1_main.iml" filepath="$PROJECT_DIR$/.idea/modules/GLRMTest1_main.iml" group="GLRMTest1" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GLRMTest1_test.iml" filepath="$PROJECT_DIR$/.idea/modules/GLRMTest1_test.iml" group="GLRMTest1" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Test1/Test1.iml" filepath="$PROJECT_DIR$/.idea/modules/Test1/Test1.iml" group="Test1" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Test1/Test1_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Test1/Test1_main.iml" group="Test1" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Test1/Test1_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Test1/Test1_test.iml" group="Test1" />
     </modules>
   </component>
 </project>

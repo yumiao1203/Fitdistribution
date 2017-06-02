@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ch.megard:akka-http-cors_2.11:0.1.7">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/gradle/caches/modules-2/files-2.1/ch.megard/akka-http-cors_2.11/0.1.7/cc70a6f0f51d811c38369c4bdc3f0e4216274605/akka-http-cors_2.11-0.1.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/gradle/caches/modules-2/files-2.1/ch.megard/akka-http-cors_2.11/0.1.7/ed79c0d93e8d0a90c10c9aa7405c176cee0b102/akka-http-cors_2.11-0.1.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

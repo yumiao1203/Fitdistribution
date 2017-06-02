@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ai.h2o:h2o-persist-hdfs:3.10.4.7">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/gradle/caches/modules-2/files-2.1/ai.h2o/h2o-persist-hdfs/3.10.4.7/f78b5908ff0e849455b70cff349549ba122d1fe2/h2o-persist-hdfs-3.10.4.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/gradle/caches/modules-2/files-2.1/ai.h2o/h2o-persist-hdfs/3.10.4.7/e7ce15a1a899afed8083bf35d64cdffa9522ad5d/h2o-persist-hdfs-3.10.4.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
