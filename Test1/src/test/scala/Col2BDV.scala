@@ -8,7 +8,6 @@ import breeze.linalg.{DenseVector => BDV}
 import com.chinapex.FitGamma._
 import com.chinapex.FitGaussian._
 import com.chinapex.FitExponential._
-import com.chinapex.FitLogNormal._
 
 
 object Col2BDV extends App {
@@ -32,9 +31,15 @@ object Col2BDV extends App {
   val AgeArray = cleandf.select("Age").rdd.map { r => r.getDouble(0) }.collect()
   val AgeBDV = BDV(AgeArray: _*)
 
-  fitGauss(AgeBDV)
-  fitGamma(AgeBDV)
-  fitExponential(AgeBDV)
-  fitLogNormal(AgeBDV)
+  val row2BDV = cleandf.rdd.map { case row =>
+      BDV(row.toSeq.toArray.map{
+        x => x.toString})
+  }
+  val RDDtoArray = row2BDV.collect()
+
+
+//  fitGauss(AgeBDV)
+//  fitGamma(AgeBDV)
+//  fitExponential(AgeBDV)
 
 }
