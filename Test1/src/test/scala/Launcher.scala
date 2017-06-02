@@ -8,7 +8,6 @@ import breeze.numerics._
 import com.chinapex.FitGamma._
 import com.chinapex.FitGaussian._
 import com.chinapex.FitExponential._
-import com.chinapex.FitLogNormal._
 import org.sameersingh.scalaplot.Implicits._
 import breeze.stats._
 import breeze.stats.distributions.Gaussian
@@ -28,7 +27,6 @@ object Launcher extends App {
   //Test data
 
   val realData = Gaussian(0.0,1.0).sample(100)
-  realData
   val realBDV = BDV(realData.toArray:_*)
 
 

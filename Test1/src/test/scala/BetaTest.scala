@@ -1,7 +1,7 @@
-import breeze.linalg.sum
+
 import breeze.numerics.{abs, log}
 import com.chinapex.FitBeta.{psi, psiPrime}
-import breeze.linalg.{max, min, sum, DenseMatrix => BDM, DenseVector => BDV}
+import breeze.linalg.{max, sum, DenseMatrix => BDM, DenseVector => BDV}
 
 
 /**
