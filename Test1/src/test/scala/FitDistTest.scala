@@ -3,7 +3,6 @@ import breeze.linalg.{DenseVector => BDV}
 import breeze.stats._
 
 
-
 /**
   * Created by josh on 17-5-26.
   */
