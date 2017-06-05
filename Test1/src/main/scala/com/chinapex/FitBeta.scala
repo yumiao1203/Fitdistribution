@@ -54,8 +54,8 @@ object FitBeta {
   def fitBeta(vec: BDV[Double]): (Double,Double) = {
     val n = vec.length
     var alpha0 = 3.0
-    var beta0 = 1.0
-    for (i <- 1 to 20) {
+    var beta0 = 12.0
+    for (i <- 1 to 30) {
       val G = BDM((psiPrime(alpha0) - psiPrime(alpha0 + beta0), -psiPrime(alpha0 + beta0)),
         (-psiPrime(alpha0 + beta0), psiPrime(beta0) - psiPrime(alpha0 + beta0)))
       val g = BDV(psi(alpha0) - psi(alpha0 + beta0) - 1 / n * sum(log(vec)),

@@ -4,7 +4,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.{Column, SparkSession}
 import breeze.linalg.{min, DenseVector => BDV}
 import breeze.stats.distributions._
-import com.chinapex.KNNKL._
+import com.chinapex.KLDiv_KNN._
 import org.apache.spark.mllib.stat.KernelDensity
 import org.apache.spark.rdd.RDD
 
@@ -22,9 +22,31 @@ object Launcher extends App {
   //Test data
 
 //  val realData = Gaussian(0.0,1.0).sample(100)
-  val realData = Gamma(2,2).sample(100)
+ // val realData = Gamma(2,2).sample(100)
+ val spark = SparkSession.builder
+   .master("local")
+   .appName("Spark CSV Reader")
+   .getOrCreate
+  val df = spark.read
+    .format("com.databricks.spark.csv")
+    .option("inferSchema", "true")
+    .option("header", "false")
+    .load("/home/josh/IdeaProjects/Fitdistribution/scala_gamma.csv")
+
+  val dfTest = spark.read
+    .format("com.databricks.spark.csv")
+    .option("inferSchema", "true")
+    .option("header", "true")
+    .load("/home/josh/IdeaProjects/Fitdistribution/testdata.csv")
+
+  val testData =dfTest.select("x").collect().map{r => r.getDouble(0)}
+
+  val realData = df.collect().map{r => r.getDouble(0)}
+//  val realData = Gamma(2,2).sample(100)
+
 
   val realBDV = BDV(realData.toArray:_*)
+
 
   val param0 = FitUniform.fitUniform(realBDV)
   println(param0)
@@ -42,8 +64,8 @@ object Launcher extends App {
   println(param3)
   val ExponData = Exponential(param3).sample(100)
 
-  val param4 = FitBeta.fitBeta(realBDV)
-  print(param4)
+//  val param4 = FitBeta.fitBeta(realBDV)
+//  print(param4)
 //  val BetaData = Beta(param4._1,param4._2).sample(100)
 
 
@@ -147,11 +169,13 @@ object Launcher extends App {
 //  val beta = (x: Double, alpha: Int, beta: Int) =>
 //    pow(x, alpha-1)*pow(x, beta-1)/cBeta(alpha, beta)
 //
+  println(execute1(realData.toArray,UniformData.toArray, k = 10))
+  println(execute1(realData.toArray,GaussData.toArray,k = 10))
+  println(execute1(realData.toArray,GammaData.toArray,k = 10))
+  println(execute1(realData.toArray,ExponData.toArray,k = 10))
+  println(execute1(realData.toArray,testData,k = 10))
+  println(execute1(realData.toArray,realData,k = 10))
 
-  println(execute1(realData.toArray,GaussData.toArray,10))
-  println(execute1(realData.toArray,GammaData.toArray,10))
-  println(execute1(realData.toArray,ExponData.toArray,10))
-  println(execute1(realData.toArray,UniformData.toArray,10))
 
 
 
