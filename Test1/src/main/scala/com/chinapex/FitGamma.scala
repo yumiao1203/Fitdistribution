@@ -15,7 +15,7 @@ object FitGamma {
   }
   def fitGamma (vec: BDV[Double]): (Double,Double) = {
     val logVec = log(vec)
-//    println(vec.size,mean(logVec),mean(vec))
+    //    println(vec.size,mean(logVec),mean(vec))
     val ss = Gamma.SufficientStatistic(vec.size,mean(logVec), mean(vec))
     val parm = Gamma.mle(ss)
     parm

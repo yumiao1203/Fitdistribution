@@ -13,7 +13,7 @@ object FitExponential {
   //mle
   def fitExponential (vec: BDV[Double]): Double = {
     val ss = Exponential.SufficientStatistic(vec.size,sum(vec))
-    val parm = Exponential.mle(ss)
-    parm
+    val param = Exponential.mle(ss)
+    param
   }
 }

@@ -18,6 +18,5 @@ object FitLognormal {
     val ss = Gaussian.SufficientStatistic(vector.size, mean(vector), vector.size * variance(vector))
     val param = Gaussian.mle(ss)
     param
-
   }
 }
