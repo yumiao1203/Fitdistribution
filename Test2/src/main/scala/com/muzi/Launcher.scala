@@ -20,6 +20,9 @@ object Launcher extends App {
 
   val realData = LogNormal(0, 1).sample(numSamples)
   val realRDD = sc.parallelize(realData)
+  println(realRDD.count())
+  val realArray = realRDD.collect()
+
 
   val realBDV = BDV(realData.toArray: _*)
 

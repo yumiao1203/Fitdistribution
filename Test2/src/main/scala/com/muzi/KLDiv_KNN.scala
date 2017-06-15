@@ -3,9 +3,10 @@ package com.muzi
 /**
   * Created by josh on 17-6-14.
   */
-import breeze.numerics.{abs, log, pow}
-import breeze.linalg.{max, min, sum, DenseVector => BDV}
-import breeze.stats.distributions.{Gamma, Gaussian}
+import breeze.numerics.{abs, log}
+import breeze.linalg.{max, sum}
+import breeze.stats.distributions. Gaussian
+import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
 
 object KLDiv_KNN {
@@ -13,43 +14,44 @@ object KLDiv_KNN {
   val conf = new SparkConf().setAppName("KL-Divergence").setMaster(s"local[$numTasks]")
   val sc = new SparkContext(conf)
   sc.setLogLevel("ERROR")
+
   def main(args: Array[String]): Unit = {
-    val samples1 = Gaussian(0,1).sample(100)
-    val samples2 = Gaussian(0,1).sample(100)
+    val samples1 = Gaussian(0,1).sample(10000)
+    val samples2 = Gaussian(0,1).sample(10000)
     val samp1RDD = sc.parallelize(samples1)
     val samp2RDD = sc.parallelize(samples2)
-    val R = samples1.toArray
-    val T = samples2.toArray
-    //    val R = Array(1.1, 0.4, 3.1, 0.8, 0.1, 1.4, 1.7, 2.3, 9) //generate samples
-    //    val T = Array(0.8, 0.9, 0.7, 0.3, 0.3, 0.9, 1.4, 8) //real data
-    println(execute1(R,T,10))
+    val tic = System.nanoTime()
+    println(execute(samp1RDD,samp2RDD,10),(System.nanoTime()-tic)/1e9)
+
   }
 
-  def execute1(R: Array[Double], T: Array[Double], k: Int): Double = {
+  def execute(Rrdd: RDD[Double], Trdd: RDD[Double], k: Int): Double = {
 
-    val numR = R.length
-    val numT = T.length
+    val numR = Rrdd.count.toInt
+    val numT = Trdd.count.toInt
+    val R = Rrdd.collect()
+    val T = Trdd.collect()
     val d = 1
     val nearestPointsIndex = new Array[Int](k)
     val distanceArray1 = new Array[Double](numT)
     val distanceArray2 = new Array[Double](numT)
     //    val distanceArray1 = Array.fill(numT)(1.0)
     //    val distanceArray2 = Array.fill(numT)(1.0)
-    val crossdif = new Array[Double](R.length)
-    val dif = new Array[Double](T.length)
+    val crossdif = new Array[Double](numR)
+    val dif = new Array[Double](numT)
 
-    if(k > R.length || k > T.length){
+    if(k > numR || k > numT){
       println("k should be less than sample size!")
 
     }
 
-    for (i <- 0 until T.length) {
-      for(j <- 0 until R.length ) {
+    for (i <- 0 until numT) {
+      for(j <- 0 until numR ) {
         crossdif(j) = abs(T(i) - R(j))
       }
 
       for(h <- 0 until k){
-        val dif1 = new Array[Double](R.length)
+        val dif1 = new Array[Double](numR)
         crossdif.copyToArray(dif1)
 
         val minIndex = crossdif.zipWithIndex.minBy(_._1)._2 //找到最小值所对应的index
@@ -57,7 +59,7 @@ object KLDiv_KNN {
         distanceArray1(i) = distanceArray1(i) + crossdif(nearestPointsIndex(h))
         crossdif(minIndex) = max(crossdif)+1
       }
-      for(m <- 0 until T.length){
+      for(m <- 0 until numT){
         dif(m) = abs(T(m) - T(i))
         dif(i) = max(dif)+1
       }
